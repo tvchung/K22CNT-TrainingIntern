@@ -34,7 +34,7 @@
                         <p class="thanh-tien" data-money="1255000">1,255,000 đ</p>
                     </td>
                     <td>
-                        <button>Xóa</button>
+                        <button class="btn btn-danger btn-xoa" >Xóa</button>
                     </td>
                 </tr>
                 <tr>
@@ -50,7 +50,7 @@
                         <p class="thanh-tien" data-money="2255000">2,255,000 đ</p>
                     </td>
                     <td>
-                        <button>Xóa</button>
+                        <button class="btn btn-danger btn-xoa" >Xóa</button>
                     </td>
                 </tr>
             </tbody>
@@ -96,9 +96,16 @@
                     let tien = $(this).attr('data-money');
                     tongTien += parseFloat(tien);
                 })
-
                 $('.tongTien').text(number_format(tongTien, 0, '.', ',') + ' ₫');
             }
+
+            // Xóa
+            $('.btn-xoa').click(function(){
+                if(confirm('Bạn có chắc chẵn xóa không?')==true){
+                    $(this).parent().parent().remove();
+                    fn_ThanhTien();
+                }
+            })
         })
 
 
