@@ -1,0 +1,46 @@
+## Làm việc với thư viện jquery
+1. Nhúng jquery vào trang html (Phần head hoặc trước thẻ đóng body)
+    - Tải về từ trang chủ: jquery.com; ...
+        <script src="js/jquery.min.js"></script>
+    - Nhúng trực tiếp từ cloud
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+2. Cú pháp
+    $(selector).action({
+        statement;
+    })
+
+    *) selector: 
+        - Tên thẻ html: h1, p, div, ....
+        - Tên class: .test; .box, ...
+        - Tên id: #test; #zone1, ....
+        - Giá trí thuộc tính: input[type='text']
+        - Cú pháp css selector: div>p,  #zone1 p ;
+        - ...
+    *) action: các hoạt động trên selector
+        click, hide, show, hover, mouseover, blur, scroll, resize, ...
+    Ví dụ:
+     $('button').click({
+        alert('Bạn vừa click');
+     })
+
+     $('h1').hide();
+
+3. Các sự kiện thông dụng
+    .click() Khi click chuột lên đối tượng
+    .dbclick() Click đúp chuột vào đối tượng
+    .hover() Di chuột vào đối tượng
+    .mousedown() Sự kiện click chuột lên đối tượng
+    .mousemove() Di chuyển lên thành phần của đối tượng
+    .mouseover() Di chuyển chuột ra ngoài đối tượng
+    .mouseup() Sự kiện nhả chuột ra khỏi đối tượng
+    .toggle() Thực thi 2 sự kiện cho thành phần đối tượng
+
+4. Các hiệu ứng
+    .animate() Thực hiện hoạt cảnh chuyển động của đối tượng
+    .fadein() Hiển thị đối tượng
+    .fadeout ẩn đối tượng
+    .fadeto() Thay đổi độ mờ đục của đối tượng
+    .fadetoggle() ẩn hoặc hiển thị đối tượng
+    .hide() ẩn đối tượng
+    .show() Hiển thị đối tượng
